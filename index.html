@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">SOBRE MI</a></li>
+                <li><a href="#proyectos">PROYECTO</a></li>
+                <li><a href="#contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Oneisy Hidalgo</h1>
+            <h2>Ingeniera en sistemas y computación</h2>
+            <p>Me considero una persona proactiva, analítica y apasionada por la tecnología.</p>
+            <a href="https://github.com/oneisyhidalgo" class="btn">GitHub</a>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="sobre-mi-content">
+            <img src="mifoto.jpg" alt="Mi foto" class="mi-foto">
+            <div class="mi-descripcion">
+                <p>Soy una estudiantede 21 años en término de Ingeniería en Sistemas en la oym con experiencia en el desarrollo de aplicaciones
+                    móviles, desarrollo de software y estrategias de marketing digital.
+                    Me considero una persona proactiva, analítica y creativa, con una mentalidad orientada a resultados y
+                    una gran capacidad de adaptación.</p>
+                <div class="cv-buttons">
+                    <button onclick="window.open('CV.pdf', '_blank')">Ver CV</button>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2 class="titulo">Algunos de mis Proyectos</h2>
+        <div class="contenedor-proyectos">
+            <div class="proyecto">
+                <img src="EFINAL.jpg" alt="Proyecto 1">
+                <h3>Sistema de Calificación</h3>
+                <p>
+                    Desarrollé un sistema de calificación basado en los métodos de evaluación de mi universidad.
+                    Este sistema permite a los profesores gestionar las calificaciones de sus alumnos de forma eficiente.
+                    
+                </p>
+                <a href="https://github.com/oneisyhidalgo/proyectofs" target="_blank">Ver en GitHub</a>
+                </div>
+            <div class="proyecto">
+                <img src="EOCTAVO.jpg" alt="Proyecto 2">
+                <h3>App Tienda de Tenis</h3>
+                <p>
+                    Creé una aplicación virtual donde puedes comprar artículos de tenis según su marca, características, etc.
+                    Esta aplicación fue un proyecto personal para practicar mis habilidades.
+                </p>
+                <a href="https://github.com/oneisyhidalgo/apptienda" target="_blank">Ver en GitHub</a>
+                </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto-content">
+
+            <p>¡Estoy abierta a nuevas oportunidades y colaboraciones! No dudes en ponerte en contacto conmigo.</p>
+            <ul class="contacto-details">
+                <li><i class="fas fa-envelope"></i> Email: paolahidalgo23.ph@gmail.com</li>
+                <li><i class="fab fa-Instagram"></i> Instagram: <a
+                        href="https://www.instagram.com/oneisyshidalgoo/?igsh=MWx1d2h0cjg1cTRhNA%253D%253D&utm_source=qr#"
+                        target="_blank">Instagram.com/in/oneisys</a></li>
+            </ul>
+        
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oneisys - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
